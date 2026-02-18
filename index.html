@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h2>IndexedDB – Search Using Index (Multiple Results)</h2>
+        <div class="subtitle">
+          Database with 20 users, indexed by name – search returns all matches.
+        </div>
+      </div>
+      <div class="left">
+        <div class="card-search">
+          <label for="searchName"
+            ><p>Search users by name (using index):</p></label
+          >
+          <div class="search-row">
+            <input
+              id="searchName"
+              type="text"
+              placeholder="e.g. Ahmed, Sara, Omar..."
+            />
+            <button onclick="FindByName()">Search</button>
+          </div>
+          <button class="btn-clear" onclick="clearSearch()">
+            🧹 Clear Search Results
+          </button>
+        </div>
+        <div>
+          <div class="Log-title">Log:</div>
+          <div class="Log"></div>
+        </div>
+        <div>
+          <div class="table-title">Search Results (by Name)</div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 70px">ID</th>
+                  <th>Name</th>
+                  <th style="width: 60px">Age</th>
+                </tr>
+              </thead>
+              <tbody id="searchBody"></tbody>
+            </table>
+            <div class="note" id="note-search">
+              No search yet or no matching users.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="section-header">
+          <div class="title">All Users in Database</div>
+          <button onclick="ReloadAllUsers()">🔄 Refresh</button>
+        </div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody class="usersBody"></tbody>
+          </table>
+          <div class="note" id="allEmptyNote">
+            No users found. (This should not happen if initial seeding works.)
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+body {
+  background: linear-gradient(135deg, blue, white, pink);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  padding: 20px 40px;
+  background: #020617;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+  width: 860px;
+}
+
+.card-header {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-search {
+  border-radius: 8px;
+  border: 1px solid #dddddd5b;
+  padding: 15px 20px;
+}
+
+.card-search label {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.search-row {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid #9ca3af79;
+  outline: none;
+  font-size: 0.95rem;
+  color: white;
+}
+
+input:focus {
+  border-color: green;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.7);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.274);
+}
+
+button {
+  padding: 8px 12px;
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: rgb(30, 83, 255);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+}
+
+.btn-clear {
+  background-color: gray;
+}
+
+.btn-clear:hover {
+  background-color: gray;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+.Log-title {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.Log {
+  min-height: 30px;
+  border: 1px solid #dddddd5b;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 6px 12px;
+  font-size: 0.89rem;
+}
+
+.table-title {
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  margin-top: 0.9rem;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: 8px;
+  text-align: left;
+}
+
+thead {
+  background-color: #0f172a;
+}
+
+tr,
+th,
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+tbody tr:nth-child(odd) {
+  background: #030712;
+}
+
+tbody tr:nth-child(even) {
+  background: #020617;
+}
+
+.note {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  color: #e5e7eb;
+}
+
+.right {
+  padding-top: 8px;
+}
+
+.section-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  display: block;
+  color: #e5e7eb;
+  font-size: 0.92rem;
+}
+
+.section-header button {
+  padding: 5px 8px;
+}
+
+.Line-card {
+  margin: 2px 0;
+}
+
+.Line-ok {
+  color: #22c55e;
+}
+
+.Line-error {
+  color: #fb7185;
+}
+
+.Line-info {
+  color: white;
+}
